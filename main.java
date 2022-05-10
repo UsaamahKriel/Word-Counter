@@ -1,29 +1,6 @@
 import java.lang.Math;
 import java.util.Arrays;
 public class main{
-   public static boolean Arm(int a){
-         String number = String.valueOf(a);
-         char[] digits = number.toCharArray();
-         int arm = 0;
-         for (int i = 0; i < digits.length; i++){
-            arm += Math.pow(Character.getNumericValue(digits[i]),3);
-         }
-         if (arm == a){
-            return true;
-         }else{
-            return false;
-         }
-      }
-      public static String Reverse(String word){
-         char[] word1 = word.toCharArray();
-         char[] word2 = word1.clone();
-         for (int i = 0; i < word1.length; i++){
-            word2[i] = word1[word1.length-i-1];
-         }
-         return new String(word2);
-      }
-      
-      
    public static int Count(String sentence, String word){
       int count = 0;
       sentence += " ";
@@ -55,10 +32,5 @@ public class main{
       
       }
       return count;
-   }
-   
-   
-   public static void main(String[] args){
-      System.out.println(Count("Hi my nAme my naMe. hi my", "name"));
    }
 }
